@@ -3,6 +3,7 @@
 :root {
     --blue: rgb(0, 69, 97);
     --orange: rgb(239, 127, 26);
+    --lgrey: rgb(237, 237, 237);
 }
 
 * {
@@ -40,7 +41,9 @@ body {
 .nav {
     display: flex;
     gap: 28px;
+    /*
     font-size: 14px;
+    */
     margin-right: 8px;
     font-kerning: none;
 }
@@ -48,12 +51,18 @@ body {
 .nav a {
     text-decoration: none;
     color: var(--blue);
-    font-weight: 500;
+    transition: color 0.3s;
+
+}
+
+a:hover, a:active {
+    color: var(--orange);
     transition: color 0.3s;
 }
 
-.nav a:hover {
-    color: var(--orange);
+a {
+    color: var(--lgrey);
+    text-decoration: none;
 }
 
 .main-content {
@@ -74,20 +83,27 @@ body {
 }
 
 .content {
+    font-size: 1.5rem;
     position: relative;
     z-index: 2;
     /*padding: 18rem 6rem 0 0;*/
     /*padding-top: 20vh;*/
     color: white;
     width: 50vw;
-    margin: 0 3em 0 auto;
+    margin: 0 2em 0 auto;
     text-align: center;
     align-content: center
 }
 
 .content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--orange);
+    margin-bottom: 2rem;
+}
+
+#title {
+    color: var(--lgrey);
 }
 
 .header-main {
@@ -112,6 +128,20 @@ body {
     margin: 5px 0;
     transition: 0.3s;
 }
+
+.facebook {
+    height: 1rem;
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+.pages{
+    text-align: right;
+    align-content: start;
+    margin-top: 3em;
+    line-height: 2.5rem;
+}
+
 
 @media (max-width: 1200px) {
     .header {
